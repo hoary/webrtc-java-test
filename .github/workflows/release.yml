@@ -24,6 +24,8 @@ jobs:
     outputs:
       release_body: ${{ steps.git-cliff.outputs.content }}
       release_version: ${{ steps.git-cliff.outputs.version }}
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout
